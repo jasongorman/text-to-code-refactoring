@@ -1,8 +1,4 @@
-const alert = require('./alerts');
-const {register, of} = require('./video.js');
-const award = require('./member.js');
-
-function VideoLibrary(catalogue, members) {
+function VideoLibrary(catalogue, members, {register, of}, award, alert) {
 
     return (donatedVideo, donor) => {
         // add donated video to catalogue
@@ -26,4 +22,4 @@ function add(donatedVideo) {
     }
 }
 
-module.exports = {VideoLibrary, add};
+module.exports = VideoLibrary;

@@ -1,4 +1,7 @@
-const {VideoLibrary, add} = require('./videolibrary.js');
+const VideoLibrary = require('./videolibrary.js');
+const alert = require('./alerts');
+const copyable = require('./video.js');
+const award = require('./member.js');
 
 let catalogue = [];
 
@@ -15,7 +18,7 @@ let member = {
 
 let members = [member];
 
-const donate = VideoLibrary(catalogue, members);
+const donate = VideoLibrary(catalogue, members, copyable, award, alert);
 
 donate(video, member);
 
